@@ -42,7 +42,7 @@ module.exports = function OurPromise (ctor) {
 			value = cb(value); 
 		}
 		onResolve = cb; 
-		return this;
+		return promise;
 	}
 	promise.catch = function (cb) { 
 		if (state === 2) { cb(value); }
